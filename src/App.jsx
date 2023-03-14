@@ -26,7 +26,7 @@ function App() {
       date: "2019-01-21",
     },
     {
-      title: "the Emu War",
+      title: "The Emu War",
       upvotes: 24,
       date: "2019-10-21",
     },
@@ -68,10 +68,9 @@ function App() {
 
   return (
     <div className="w-full h-full flex items-center flex-col pt-10 gap-14">
-      <div className="flex flex-row justify-evenly gap-12">
-        <p>Sort by</p>
-        <button onClick={handleMostVoted} disabled={votedButtonStatus}>Most Voted</button>
-        <button onClick={handleMostRecent} disabled={recentButtonStatus}>Most Recent</button>
+      <div className="flex flex-row justify-evenly gap-12 items-center">
+        <button className="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded disabled:opacity-40 disabled:hover:bg-teal-500" onClick={handleMostVoted} disabled={votedButtonStatus}>Most Voted</button>
+        <button className="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded disabled:opacity-40 disabled:hover:bg-teal-500" onClick={handleMostRecent} disabled={recentButtonStatus}>Most Recent</button>
       </div>
       <Articles articles={articles}/>
     </div>
